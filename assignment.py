@@ -9,7 +9,7 @@ def getIntegers(myList):
 
     return integers
 
-def getFactor(myList,factor):
+def getFactors(myList,factor):
     # myList : expected list or tuple
     # factor : integer
     # iterate through the list and add the number to the list if
@@ -33,7 +33,7 @@ def test1():
   assert getIntegers(l2) == range(4)
 
 def test2():
-  l1 = range(10)
+  l1 = range(1,10)
   assert getFactors(l1,12) == [1,2,3,4,6]
   assert getFactors(l1,21) == [1,3,7]
   assert getFactors(l1,18) == [1,2,3,6,9]
