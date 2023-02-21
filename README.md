@@ -31,3 +31,25 @@ The syntax for list comprehension is:
 newlist = [*expression* for *item* in *iterable* if *condition* == True]
  
 A great resource for looking at list comprehension includes the w3schools page at https://www.w3schools.com/python/python_lists_comprehension.asp
+
+List comprehension can also be used to handle nested for loops.  Consider:
+```
+timestables = []
+for i in range(1,11):
+  for j in range(1,11):
+    timestables.append(f"{i} x {j} = {i*j}")
+```
+the same could be done with 2 lists in your list comprehension
+```
+timestables = [f"{i} x {j} = {i*j}" for i in range(1,11) for j in range(1,11)]
+print(timestables)
+```
+or even consider:
+```
+for x in [f"{i} x {j} = {i*j}" for i in range(1,11) for j in range(1,11)]:
+  print(x)
+```
+
+# Assignment
+* Work through the assignments in assignment.py to convert your code from your previous assignment to use list comprehension
+* Open up deck.py.  Use list comprehension with the 2 lists to create a new list that shows all 52 possible cards in a deck of cards, and then deal 5 cards randomly into a hand and print them.
