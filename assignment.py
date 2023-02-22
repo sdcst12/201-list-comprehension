@@ -9,9 +9,9 @@ def getIntegers(myList):
 
     return integers
 
-def getFactors(myList,factor):
+def getFactors(myList,number):
     # myList : expected list or tuple
-    # factor : integer
+    # number : integer
     # iterate through the list and add the number to the list if
     # it is a factor of the number
     factors = []
@@ -28,9 +28,9 @@ def getNegatives(myList):
 
 def test1():
   l1 = [x * .5 for x in range(20)]
-  assert getIntegers(l1) == range(10)
+  assert getIntegers(l1) == [i for i in range(10)]
   l2 = [x /3 for x in range(12)]
-  assert getIntegers(l2) == range(4)
+  assert getIntegers(l2) == [i for i in range(4)]
 
 def test2():
   l1 = range(1,10)
